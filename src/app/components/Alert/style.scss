@@ -1,0 +1,39 @@
+@import "./../constants";
+
+.alert {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 800px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+  color: #fff;
+  animation: showAlert 3s forwards;
+
+  &_info {
+    background-color: $aInfo;
+  }
+  &_warning {
+    background-color: $aWarning;
+  }
+  &_error {
+    background-color: $aError;
+  }
+  &_success {
+    background-color: $aSuccess;
+  }
+
+  @keyframes showAlert {
+    0%, 100% {
+      top: -60px;
+    }
+    20%, 80% {
+      top: 20px;
+    }
+  }
+}

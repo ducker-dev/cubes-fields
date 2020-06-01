@@ -1,0 +1,13 @@
+.game {
+  margin-bottom: 50px;
+
+  &__players {
+    display: flex;
+    margin-bottom: 30px;
+
+    .player-card:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
